@@ -1,0 +1,87 @@
+<html lang="pt-br">
+<head>
+    <title>Checkout RCHLO</title>
+    <meta charset="utf-8"/>
+</head>
+
+    <h1>Ótima escolha!</h1>
+
+    <p>Obrigado por comprar na RCHLO! Preencha seus dados para efetivar a compra.</p>
+
+    <h2>Sua compra</h2>
+
+    <img style="height: 120px;" alt="Camiseta Manga Curta Malha Tie Dye The Simpsons Branco Riachuelo" src="https://static.riachuelo.com.br/RCHLO/14247984003/portrait/279d0565feb361cff852a6a792ffdb5c89890ba3.jpg">
+
+    <dl>
+        <dt>Produto</dt>
+        <dd>Camiseta Manga Curta Malha Tie Dye The Simpsons Branco Riachuelo</dd>
+
+        <dt>Cor</dt>
+        <dd>Branco</dd>
+
+        <dt>Tamanho</dt>
+        <dd>G</dd>
+
+        <dt>Preço</dt>
+        <dd>R$ 69,90</dd>
+    </dl>
+
+    <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <div>
+                <label for="nome">Nome completo</label>
+                <input id="nome" name="nome">
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div>
+                <label for="cpf">CPF</label>
+                <input id="cpf" name="cpf">
+            </div>
+
+            <div>
+                <input id="newsletter" type="checkbox" name="newsletter" value="true" checked>
+                <label for="newsletter">Quero receber a newsletter da RCHLO!</label>
+            </div>
+
+        </fieldset>
+    
+        <fieldset>
+            <legend>Cartão de crédito</legend>
+
+            <div>
+                <label for="numero-cartao">Número</label>
+                <input id="numero-cartao" name="numero-cartao">
+            </div>
+
+            <div>
+                <label for="cvv-cartao">CVV</label>
+                <input id="cvv-cartao" name="cvv-cartao">
+            </div>
+
+            <div>
+                <label for="bandeira-cartao">Bandeira</label>
+                <select id="bandeira-cartao" name="bandeira-cartao">
+                    <option value="mastercard" selected>MasterCard</option>
+                    <option value="visa">VISA</option>
+                    <option value="american-express">American Express</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="validade-cartao">Validade</label>
+                <input type="month" id="validade-cartao" name="validade-cartao">
+            </div>
+
+        </fieldset>
+
+        <button type="submit">Confirmar Pedido</button>
+    </form>
+</body>
+</html>
