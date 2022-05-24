@@ -45,13 +45,16 @@
 
         <div class="col-md-8">
 
-            <form>
+            <form class="formulario-checkout" novalidate>
                 <fieldset>
                     <legend>Dados Pessoais</legend>
     
                     <div class="form-group">
                         <label for="nome">Nome completo</label>
                         <input class="form-control" type="text" id="nome" name="nome" required maxlength="200">
+                        <div class="invalid-feedback">
+                            O nome é obrigatório.
+                        </div>
                     </div>
     
                     <div class="form-group">
@@ -105,11 +108,11 @@
     
         </div>
 
-
-
     </div> <!-- row -->
 
     </div> <!-- container -->
+
+    <script src="validacao.js"></script>
 
 </body>
 </html>
