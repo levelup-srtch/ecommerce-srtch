@@ -15,88 +15,101 @@
 
     <div class="container">
 
-    <div class="card">
-        <div class="card-header">
-            <h2>Sua compra</h2>
-        </div>
-        <div class="card-body">
-            <img class="img-thumbnail mb-3" alt="Camiseta Manga Curta Malha Tie Dye The Simpsons Branco Riachuelo" src="https://static.riachuelo.com.br/RCHLO/14247984003/portrait/279d0565feb361cff852a6a792ffdb5c89890ba3.jpg">
-            <dl>
-                <dt>Produto</dt>
-                <dd>Camiseta Manga Curta Malha Tie Dye The Simpsons Branco Riachuelo</dd>
-        
-                <dt>Cor</dt>
-                <dd>Branco</dd>
-        
-                <dt>Tamanho</dt>
-                <dd>G</dd>
-        
-                <dt>Preço</dt>
-                <dd>R$ 69,90</dd>
-            </dl>
-        </div>
-    </div>
+    <div class="row">
 
+        <div class="col-md-4">
 
-    <form>
-        <fieldset>
-            <legend>Dados Pessoais</legend>
-
-            <div class="form-group">
-                <label for="nome">Nome completo</label>
-                <input class="form-control" id="nome" name="nome">
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input class="form-control" type="email" id="email" name="email" placeholder="email@exemplo.com">
-            </div>
-
-            <div class="form-group">
-                <label for="cpf">CPF</label>
-                <input class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00">
-            </div>
-
-            <div class="form-group form-check">
-                <input class="form-check-input" id="newsletter" type="checkbox" name="newsletter" value="true" checked>
-                <label class="form-check-label" for="newsletter">Quero receber a newsletter da RCHLO!</label>
-            </div>
-
-        </fieldset>
+            <div class="card">
+                <div class="card-header">
+                    <h2>Sua compra</h2>
+                </div>
+                <div class="card-body">
+                    <img class="img-thumbnail mb-3" alt="Camiseta Manga Curta Malha Tie Dye The Simpsons Branco Riachuelo" src="https://static.riachuelo.com.br/RCHLO/14247984003/portrait/279d0565feb361cff852a6a792ffdb5c89890ba3.jpg">
+                    <dl>
+                        <dt>Produto</dt>
+                        <dd>Camiseta Manga Curta Malha Tie Dye The Simpsons Branco Riachuelo</dd>
+                
+                        <dt>Cor</dt>
+                        <dd>Branco</dd>
+                
+                        <dt>Tamanho</dt>
+                        <dd>G</dd>
+                
+                        <dt>Preço</dt>
+                        <dd>R$ 69,90</dd>
+                    </dl>
+                </div>
+            </div> <!-- card -->
     
-        <fieldset>
-            <legend>Cartão de crédito</legend>
+        </div>
 
-            <div class="form-group">
-                <label for="numero-cartao">Número</label>
-                <input class="form-control" id="numero-cartao" name="numero-cartao">
-            </div>
+        <div class="col-md-8">
 
-            <div class="form-group">
-                <label for="cvv-cartao">CVV</label>
-                <input class="form-control" id="cvv-cartao" name="cvv-cartao">
-            </div>
+            <form>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+    
+                    <div class="form-group">
+                        <label for="nome">Nome completo</label>
+                        <input class="form-control" type="text" id="nome" name="nome" required maxlength="200">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="form-control" type="email" id="email" name="email" placeholder="email@exemplo.com" required maxlength="300">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="cpf">CPF</label>
+                        <input class="form-control" type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                    </div>
+    
+                    <div class="form-group form-check">
+                        <input class="form-check-input" id="newsletter" type="checkbox" name="newsletter" value="true" checked>
+                        <label class="form-check-label" for="newsletter">Quero receber a newsletter da RCHLO!</label>
+                    </div>
+    
+                </fieldset>
+            
+                <fieldset>
+                    <legend>Cartão de crédito</legend>
+    
+                    <div class="form-group">
+                        <label for="numero-cartao">Número</label>
+                        <input class="form-control" type="text" id="numero-cartao" name="numero-cartao" required maxlength="16" pattern="\d{16}">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="cvv-cartao">CVV</label>
+                        <input class="form-control" type="text" id="cvv-cartao" name="cvv-cartao" required maxlength="3" pattern="\d{3}">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="bandeira-cartao">Bandeira</label>
+                        <select class="form-control" id="bandeira-cartao" name="bandeira-cartao" required>
+                            <option value="mastercard" selected>MasterCard</option>
+                            <option value="visa">VISA</option>
+                            <option value="american-express">American Express</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="validade-cartao">Validade</label>
+                        <input class="form-control" type="month" id="validade-cartao" name="validade-cartao" required>
+                    </div>
+    
+                </fieldset>
+    
+                <button type="submit" class="btn btn-primary">Confirmar Pedido</button>
+            </form>
+    
+        </div>
 
-            <div class="form-group">
-                <label for="bandeira-cartao">Bandeira</label>
-                <select class="form-control" id="bandeira-cartao" name="bandeira-cartao">
-                    <option value="mastercard" selected>MasterCard</option>
-                    <option value="visa">VISA</option>
-                    <option value="american-express">American Express</option>
-                </select>
-            </div>
 
-            <div class="form-group">
-                <label for="validade-cartao">Validade</label>
-                <input class="form-control" type="month" id="validade-cartao" name="validade-cartao">
-            </div>
 
-        </fieldset>
+    </div> <!-- row -->
 
-        <button type="submit" class="btn btn-primary">Confirmar Pedido</button>
-    </form>
-
-    </div>
+    </div> <!-- container -->
 
 </body>
 </html>
