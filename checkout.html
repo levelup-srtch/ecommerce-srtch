@@ -45,7 +45,7 @@
 
         <div class="col-md-8">
 
-            <form class="formulario-checkout" novalidate>
+            <form class="formulario-checkout mt-3 mt-sm-0" novalidate>
                 <fieldset>
                     <legend>Dados Pessoais</legend>
     
@@ -60,11 +60,17 @@
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input class="form-control" type="email" id="email" name="email" placeholder="email@exemplo.com" required maxlength="300">
+                        <div class="invalid-feedback">
+                            O email é obrigatório.
+                        </div>
                     </div>
     
                     <div class="form-group">
                         <label for="cpf">CPF</label>
                         <input class="form-control" type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                        <div class="invalid-feedback">
+                            O cpf é obrigatório.
+                        </div>
                     </div>
     
                     <div class="form-group form-check">
@@ -79,17 +85,23 @@
     
                     <div class="form-group">
                         <label for="numero-cartao">Número</label>
-                        <input class="form-control" type="text" id="numero-cartao" name="numero-cartao" required maxlength="16" pattern="\d{16}">
+                        <input class="form-control" type="text" id="numero-cartao" name="numero-cartao" required maxlength="16" pattern="\d{16}" placeholder="0000000000000000">
+                        <div class="invalid-feedback">
+                            O número do cartão é obrigatório.
+                        </div>
                     </div>
     
                     <div class="form-group">
                         <label for="cvv-cartao">CVV</label>
                         <input class="form-control" type="text" id="cvv-cartao" name="cvv-cartao" required maxlength="3" pattern="\d{3}">
+                        <div class="invalid-feedback">
+                            O CVV do cartão é obrigatório.
+                        </div>
                     </div>
     
                     <div class="form-group">
                         <label for="bandeira-cartao">Bandeira</label>
-                        <select class="form-control" id="bandeira-cartao" name="bandeira-cartao" required>
+                        <select class="form-control" id="bandeira-cartao" name="bandeira-cartao">
                             <option value="mastercard" selected>MasterCard</option>
                             <option value="visa">VISA</option>
                             <option value="american-express">American Express</option>
@@ -99,6 +111,9 @@
                     <div class="form-group">
                         <label for="validade-cartao">Validade</label>
                         <input class="form-control" type="month" id="validade-cartao" name="validade-cartao" required>
+                        <div class="invalid-feedback">
+                            A validade do cartão é obrigatória.
+                        </div>
                     </div>
     
                 </fieldset>

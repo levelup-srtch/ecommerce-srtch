@@ -4,15 +4,32 @@ const formularioCheckout = document.querySelector('.formulario-checkout');
 formularioCheckout.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const inputNome = document.querySelector('#nome');
-    if (!inputNome.value) {
-        inputNome.classList.add('is-invalid');
-    }
+    const inputsObrigatorios = document.querySelectorAll('input[required]');
+    inputsObrigatorios.forEach(inputObrigatorio => {
+        if(!inputObrigatorio.value) {
+            inputObrigatorio.classList.add('is-invalid');
+        }
+    });
 
 });
 
-// document.querySelector('#nome').setCustomValidity('O nome é obrigatório')
-// document.querySelector('#email').setCustomValidity('O email é obrigatório')
-// document.querySelector('#cpf').setCustomValidity('O cpf é obrigatório')
-// document.querySelector('#numero-cartao').setCustomValidity('O número do cartão é obrigatório')
-// document.querySelector('#cvv-cartao').setCustomValidity('O CVV do cartão é obrigatório')
+const inputsObrigatorios = document.querySelectorAll('input[required]');
+inputsObrigatorios.forEach(inputObrigatorio => {
+    inputObrigatorio.addEventListener('blur', function() {
+        if(!inputObrigatorio.value) {
+            inputObrigatorio.classList.add('is-invalid');
+            inputObrigatorio.classList.remove('is-valid');
+        } else {
+            inputObrigatorio.classList.remove('is-invalid');
+            inputObrigatorio.classList.add('is-valid');
+        }
+    });
+});
+
+
+const inputNumeroCartao = document.querySelector('#numero-cartao');
+inputNumeroCartao.addEventListener('input', function() {
+    const digitado = inputNumeroCartao.value;
+    const apenasNumeros = digitado.replace(/\D/g, '');
+    inputNumeroCartao.value = apenasNumeros;
+});
